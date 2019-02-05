@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 body, html{
 	font-family: 'Open Sans', sans-serif;
@@ -15,8 +14,6 @@ h1{
 h2{
 	font-weight: 800;
 	font-size: 40px;
-	color: #696969;
-
 }
 
 h3{
@@ -91,6 +88,14 @@ button.cta{
 	padding: 20px 30px;
 	border-radius: 10px;
 	text-decoration: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+a.cta:active,
+button.cta:active{
+	opacity: .7;
 }
 
 a.cta.alt,
@@ -104,13 +109,15 @@ nav{
 	height: 100px;
 	background-color: beige;
 	box-shadow: 0 5px 8px rgba(0, 0, 0, .2);
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
 nav .logo{
 	display: block;
 	width: 300px;
-	height: 45px;
+	height: 40px;
 	position: absolute; top: 50%; left: 30px;
 	margin-top: -20px;
 	background: url(img/logo.png) no-repeat 0 0;
@@ -150,109 +157,128 @@ nav ul li a{
 }
 
 
-
-
-/* <div class="more-info" id="more-info">
-		<h2>Csatlakozz a közösséghez</h2>
-		<p>Minden hónapban<span class="highlight"> körlevél</span> az újdonságokról és az akciókról</p>
-		<button class="cta">Feliratkozom</button>
-=======
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
-body, html{
-	font-family: 'Open Sans', sans-serif;
-	background-color: cornsilk;
-	padding: 0;
-	margin: 0;
+.more-info p{
+	margin: 18px 0 35px;
 }
 
-h1{
+.more-info h2{
+	margin: 50px 0 0;
+}
+
+.highlight{
+	background-color: #DCDCDC;
+	color: black;
+	padding: 5px 10px;
+	line-height: 50px;
+	display: inline;
 	font-weight: 800;
-	font-size: 50px;
 }
 
-h3{
+.sep{
+	width: 470px;
+	height: 10px;
+	background-color: #111111;
+	margin: 70px auto;
+}
+
+.story h3{
+	font-size: 40px;
+	font-weight: 800;
+}
+
+.nb-list{
+	width: 470px;
+	padding: 20px 20px 0 20px;
+	box-sizing: border-box;
+	background-color: #EDEDED;
+	float: left;
+	margin: 0 20px 20px 0;
+	position: relative;
+
+}
+
+.nb-list li{
+	height: 70px;
+	border-radius: 10px;
+	font-size: 40px;
+	color: dimgray;
 	font-weight: bold;
-	font-size: 30px;
+	display: block;
+	margin-bottom: 20px;
+	padding: 6px 20px;
+	box-sizing: border-box;
 }
 
-h4{
-	font-weight: bold;
-	font-size: 20px;
+.nb-list li.gray{background-color: lightgrey;}
+.nb-list li.salmon{background-color: PeachPuff;}
+.nb-list li.gray{background-color: lightgrey;}
+.nb-list li.beige{background-color: PeachPuff;}
+.nb-list li.gray{background-color: lightgrey;}
+.nb-list li.beige{background-color: PeachPuff;}
+
+.nb-list li.dragging{
+	position: absolute;
+	top: 70px;
+	left: 70px;
+	right: -30px;
+	transform: rotate(6deg);
+	box-shadow: 0 2px 14px rgba(0, 0, 0, .3);
 }
 
-.wrapper{
-	width: 960px;
+.nb-list li.dragging:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width:54px;
+	height:50px;
+	background: url(img/hand.png) no-repeat 0 0;
+	background-size: 100%;
+	bottom: -30px;
+	left: 60%;
+}
+
+.feet-img{
+	display: block;
 	margin: 0 auto;
 }
 
-.hero-banner{
-background-color: #DCDCDC;
-min-height: 100vh;
-padding: 50px 20px;
-box-sizing: border-box;
-position: relative;
-overflow: hidden;
-}
-
-.hero-banner h1{
-	color: #696969;
-	margin: 14px 0 20px; 
-}
-
-.hero-banner h3{
-	color: #696969;
-	margin: 0 0 35px; 
-}
-
-.hero-banner h4,
-.hero-banner h4 a{
-	color: #696969;
-	margin: 0;
-}
-
-.character1{
-	background: url(img/character1.png) no-repeat 0 0;
-	background-size: 100%;
-	width: 363px;
-	height: 344px;
-	position: absolute; bottom: 67px; right: 400px;
-}
-.character2{
-	background: url(img/character2.png) no-repeat 0 0;
-	background-size: 100%;
-	width: 309px;
-	height: 371px;	
-	position: absolute; top: 17%; right: 10%;
-}
-
-a.cta,
-button.cta{
-	font-size: 30px;
+footer{
+	text-align: center;
+	color: rgba(0, 0, 0, .4);
+	font-size: 20px;
+	margin: 85px 0 45px;
 	font-weight: bold;
-	color:#696969;
-	background: #DCDCDC;
-	display: inline-block;
-	box-shadow: 0 0 0 10px rgba(0,127,255,.15);
-	padding: 20px 30px;
-	border-radius: 10px;
-	text-decoration: none;
 }
 
-a.cta.alt,
-button.cta.alt{
-	background-color: cornsilk;
-	color: #696969;
-	box-shadow: 0 0 0 10px rgba(0,0,0,.15);
+footer a{
+	color: rgba(0, 0, 0, .4);
 }
 
-/* <div class="hero-banner">
-		<div class="wrapper">
-			<h4>Halász Judit a <a href="http://www.judithalaszyoga.com/">JuditHalaszYoga</a> megalkotójának másik tevékenysége</h4>
-			<h1>Thai Masszázs Pécs</h1>
-			<h3>Tradícionális Thai Masszázs</h3>
-			<a class="cta alt" href="#more-info">Tovább</a>
-		</div>
-		<img src="img/character1.png" alt="Arm roll">
-		<img src="img/character2.png" alt="Palm press">
->>>>>>> 0adfd5169f157de7476242a0ab18acca53a96fde
-	</div> */
+.popup{
+	display: none;
+}
+
+
+
+/* <div class="story" id="story">
+		<ul class="nb-list">
+			<li>&nbsp;</li>
+			<li class="yellow dragging">Nuad Boran</li>
+			<li class="salmon">Thai Masszázs</li>
+			<li class="grey">Toksen</li>
+			<li class="green">Thai Jóga Masszázs</li>
+
+
+		</ul>
+
+		<h3>Szakirodalom és hírek a Thai Masszázs világából</h3>
+		<p>A thai masszázs az egyik legősibb (több mint 2500 éves), és leghatékonyabb keleti gyógymód, amelyben keverednek a jóga,a reflexológia, az akupresszúra és az ajurvéda elemei.</p>
+		<p>Az akupresszúrás pontok mentén, az energia vonalakon (SEN) dolgozva, a masszázs növeli a szervezet energia szintjét és támogatja a természetes gyógyulást. </p>
+		<p>A kezelés segít rugalmasabbá tenni az izületeket, gyengéden nyújtja az izmokat és az inakat, kiegyensúlyozza az energiaszintet, segít a testtartás javításában, továbbá a nyújtások és a csavarások segítenek a vér- és a nyirokkeringés felpezsdítésében.</p>
+		<p>Összességében a masszázs hatására nyugodtabb, fizikailag és mentálisan is friss és kiegyensúlyozottabb leszel, az energia szabadon áramlik.</p>
+	</div>
+
+	<div class="sep">
+		
+	</div>*/
+
