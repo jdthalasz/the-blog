@@ -256,29 +256,130 @@ footer a{
 
 .popup{
 	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.popup.show{
+	display: block;
+}
+
+.popup.blanket{
+	background-color: rgba(0, 0, 0, .7);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+}
+
+.popup .content{
+	box-sizing: border-box;
+	padding: 30px 40px;
+	width: 960px;
+	height: 500px;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -250px;
+	margin-left: -480px;
+}
+
+.popup h2{
+	margin: 10px 0 20px;
+}
+
+.popup .cta{
+	margin-top: 40px;
+
 }
 
 
+.popup .close{
+	width: 80px;
+	height: 80px;
+	background: grey url(img/close.png) no-repeat center center;
+	background-size: 50%;
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	text-indent: -999px;
+	cursor: pointer;
+}
 
-/* <div class="story" id="story">
-		<ul class="nb-list">
-			<li>&nbsp;</li>
-			<li class="yellow dragging">Nuad Boran</li>
-			<li class="salmon">Thai Masszázs</li>
-			<li class="grey">Toksen</li>
-			<li class="green">Thai Jóga Masszázs</li>
+.popup .row{
+	
+}
 
+.popup .row:after{
+	content: '';
+	display: table;
+	clear: both;
+}
 
-		</ul>
+.popup .item{
+	float: left;
+	width: 415px;
+	margin-left: 40px;
+	text-align: left;
+}
 
-		<h3>Szakirodalom és hírek a Thai Masszázs világából</h3>
-		<p>A thai masszázs az egyik legősibb (több mint 2500 éves), és leghatékonyabb keleti gyógymód, amelyben keverednek a jóga,a reflexológia, az akupresszúra és az ajurvéda elemei.</p>
-		<p>Az akupresszúrás pontok mentén, az energia vonalakon (SEN) dolgozva, a masszázs növeli a szervezet energia szintjét és támogatja a természetes gyógyulást. </p>
-		<p>A kezelés segít rugalmasabbá tenni az izületeket, gyengéden nyújtja az izmokat és az inakat, kiegyensúlyozza az energiaszintet, segít a testtartás javításában, továbbá a nyújtások és a csavarások segítenek a vér- és a nyirokkeringés felpezsdítésében.</p>
-		<p>Összességében a masszázs hatására nyugodtabb, fizikailag és mentálisan is friss és kiegyensúlyozottabb leszel, az energia szabadon áramlik.</p>
-	</div>
+.popup .item:first-child{
+	margin-left: 0;
+}
 
-	<div class="sep">
-		
-	</div>*/
+.popup .item label{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	
+}
+
+.popup .item input[type='text']{
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+	border: 4px solid #111111;
+	height: 70px;
+	box-sizing: border-box;
+	width: 100%
+	padding:15px 20px;
+}
+/* <div class="popup">
+		<div class="blanket"></div>
+		<div class="content">
+			<h2>Iratkozz fel a hírlevélre</h2>
+			<form action="">
+				<div class="item">
+					<label>Keresztnév</label>
+					<input type="text" placeholder="Keresztnév" value="Judit">
+				</div>
+				<div class="item">
+					<label>Vezetéknév</label>
+					<input type="text" placeholder="Vezetéknév">
+				</div>
+				<div class="item">
+					<label>Email cím</label>
+					<input type="text" placeholder="Email cím">
+				</div>
+				<div class="item">
+					<label>Szülinap</label>
+					<input type="text" placeholder="Szülinap">
+				</div>
+				<button class="cta">Feliratkozom</button>
+			</form>
+			<button class="close">Bezár</button>
+		</div>*/
 
